@@ -1,28 +1,167 @@
+html, body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  background-color: #a8d696;
+  
+}
+
 .App {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 280px 1fr;
+  grid-template-rows: 1fr 350px 1fr;
+  grid-template-areas: ". . ."  ".  calc  ."  ".  . ."
+}
+
+.calculator {
+  grid-area: calc;
+  height: 350px;
+  width: 280px;
+  border-radius: 10%;
+  background-color: #f2f2f2;
+  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.13);
+  border: 0.5px solid gray;
+}
+
+.calcname {
+  font-size: 10px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.screen {
+  height: 48px;
+  width: 250px;
+  background-color: #1d1d1d;
+  border-radius: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  font-family: "Orbitron";
+  color: #fff;
+  font-size: 240%;
+  text-align: right;
+  padding-right: 2px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.buttonpad {
+  height: 235px;
+  width: 236px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: 30px 30px 30px 30px 30px 30px;
+  grid-template-areas: "mc  mplus mmin  mr" "c  plusmin divide  mult" "seven  eight nine  minus"  "four five  six plus" "one  two three total"  "zerob zerob  point total";
+  grid-column-gap: 12px;
+  grid-row-gap: 11px;
+  
+  
+}
+.button {
+  background-color: #f3f3f3;
+  height: 100%;
+  width: 100%;
+  font-weight: 700;
+  border: 1px solid black;
+  border-radius: 10%;
+  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.13);
+  
+    text-align:center;
+  
 }
 
-.App-title {
-  font-size: 1.5em;
+.mc{
+  grid-area: mc;
 }
 
-.App-intro {
-  font-size: large;
+.mplus{
+  grid-area: mplus;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.mmin{
+  grid-area: mmin;
+}
+
+.mr{
+  grid-area: mr;
+}
+
+.c{
+  grid-area: c;
+}
+
+.plusmin{
+  grid-area: plusmin;
+}
+
+.divide{
+  grid-area: divide;
+}
+
+.mult{
+  grid-area: mult;
+}
+
+.seven{
+  grid-area: seven;
+}
+
+.eight{
+  grid-area: eight;
+}
+
+.nine{
+  grid-area: nine;
+}
+
+.minus{
+  grid-area: minus;
+}
+
+.four{
+  grid-area: four;
+}
+
+.five{
+  grid-area: five;
+}
+
+.six{
+  grid-area: six;
+}
+
+.plus{
+  grid-area: plus;
+}
+
+.one{
+  grid-area: one;
+}
+
+.two{
+  grid-area: two;
+}
+
+.three{
+  grid-area: three;
+}
+
+.total{
+  grid-area: total;
+}
+
+.zerob{
+  grid-area: zerob;
+}
+
+.point{
+  grid-area: point;
+}
+
+.total{
+  grid-area: total;
 }
